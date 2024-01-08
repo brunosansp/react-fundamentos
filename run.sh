@@ -22,3 +22,24 @@ yarn add @babel/preset-react -D
 
 # instalando o react e react-dom(para uso web)
 yarn add react@^17.0.2 react-dom@^17.0.2
+
+# adicionando webpack
+yarn add webpack webpack-cli -D
+
+# arquivo webpack.config.js
+const path = require('path');
+
+module.exports = {
+    //entry: 'src/index.js'
+    entry: path.resolve(__dirname, 'src', 'index.js'),
+    output: {
+        path: path.resolve(__dirname, 'build'),
+        filename: 'bundle.js'
+    }
+};
+
+# gerando o bundle
+yarn webpack
+
+# limpando os arquivos de bundle automáticamente
+yarn add clean-webpack-plugin -D
