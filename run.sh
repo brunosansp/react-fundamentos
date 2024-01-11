@@ -41,5 +41,8 @@ module.exports = {
 # gerando o bundle
 yarn webpack
 
+# add plugin html-webpack para automatizar o processo de injeção da tag script no index.html da pasta public
+yarn add html-webpack-plugin --dev
+
 # limpando os arquivos de bundle automáticamente
 yarn add clean-webpack-plugin -D
