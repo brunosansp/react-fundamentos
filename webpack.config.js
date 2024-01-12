@@ -8,6 +8,7 @@ module.exports = {
      * o arquivo que iremos passar como entry é o arquivo
      * que tiver a chamada ReactDOM.render()
      */
+    mode: 'development',
     entry: path.resolve(__dirname, 'src', 'index.js'),
     output: {
         path: path.resolve(__dirname, 'build'),
@@ -28,5 +29,8 @@ module.exports = {
                 use: 'babel-loader'
             }
         ]
+    },
+    devServer: {
+        port: 3000
     }
 };
