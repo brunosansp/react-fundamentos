@@ -8,7 +8,7 @@ module.exports = {
      * o arquivo que iremos passar como entry é o arquivo
      * que tiver a chamada ReactDOM.render()
      */
-    entry: path.resolve(__dirname, 'transpiled', 'index.js'),
+    entry: path.resolve(__dirname, 'src', 'index.js'),
     output: {
         path: path.resolve(__dirname, 'build'),
         filename: 'bundle[hash].js'
@@ -18,5 +18,15 @@ module.exports = {
             template: path.resolve(__dirname, 'public', 'index.html')
         }),
         new CleanWebpackPlugin()
-    ]
+    ],
+    module: {
+        rules: [
+            // cada objeto irá representar um loader
+            {
+                test: /\.js$/,
+                exclude: /node_modules/,
+                use: 'babel-loader'
+            }
+        ]
+    }
 };

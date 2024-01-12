@@ -46,3 +46,7 @@ yarn add html-webpack-plugin --dev
 
 # limpando os arquivos de bundle automáticamente
 yarn add clean-webpack-plugin -D
+
+# adicionando o loader do babel para usarmos a configuração de transpilação pelo webpack.config.js
+npm install -D babel-loader
+
