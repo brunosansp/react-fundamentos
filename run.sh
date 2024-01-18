@@ -25,6 +25,8 @@ yarn add react@^17.0.2 react-dom@^17.0.2
 
 # adicionando webpack
 yarn add webpack webpack-cli -D
+# obs: no windows é necessário disponibilizar o webpack de forma global
+yarn add webpack-cli -g
 
 # arquivo webpack.config.js
 # const path = require('path');
