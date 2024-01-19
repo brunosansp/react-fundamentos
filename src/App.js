@@ -1,21 +1,39 @@
 import React, { Fragment } from "react";
 import Post from "./Post";
+import Header from "./Header";
 
-const category = "Posts da semana";
+const category = "Categoria fundamentos do React";
 
 // O React obriga que todo componente inicie com a primeira letra em maiúsculo
 function App() {
   return (
     <Fragment>
-      <h1>JStack's Blog</h1>
-      <h2>{category}</h2>
+      <Header title="JStack Blog">
+        <h2>Header children</h2>
+      </Header>
+
+      <h5>{category}</h5>
 
       <hr />
 
-      <Post title="Título da notícia" subtitle="Subtítulo da notícia" />
-
-      <Post title="Título da notícia" subtitle="Subtítulo da notícia" />
-      <Post title="Título da notícia" subtitle="Subtítulo da notícia" />
+      <Post
+        post={{
+          title: "Título da notícia",
+          subtitle: "Subtítulo da notícia",
+        }}
+      />
+      <Post
+        post={{
+          title: "Título da notícia",
+          subtitle: "Subtítulo da notícia",
+        }}
+      />
+      <Post
+        post={{
+          title: "Título da notícia",
+          subtitle: "Subtítulo da notícia",
+        }}
+      />
     </Fragment>
   );
 }
