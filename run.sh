@@ -125,3 +125,4 @@ yarn add webpack-dev-server -D
 #         port: 3000
 #     }
 
+yarn add prop-types

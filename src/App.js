@@ -8,7 +8,7 @@ const category = "Categoria fundamentos do React";
 function App() {
   return (
     <Fragment>
-      <Header title="JStack Blog">
+      <Header>
         <h2>Header children</h2>
       </Header>
 
@@ -17,18 +17,21 @@ function App() {
       <hr />
 
       <Post
+        likes={20}
         post={{
           title: "Título da notícia",
           subtitle: "Subtítulo da notícia",
         }}
       />
       <Post
+        likes={20}
         post={{
           title: "Título da notícia",
           subtitle: "Subtítulo da notícia",
         }}
       />
       <Post
+        likes={20}
         post={{
           title: "Título da notícia",
           subtitle: "Subtítulo da notícia",
