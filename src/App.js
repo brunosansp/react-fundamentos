@@ -22,8 +22,15 @@ function App() {
           title: `Título da notícia #${prevState.length + 1}`,
           subtitle: `Subtítulo da notícia #${prevState.length + 1}`
         }
-      ])
-    }, 2000)
+      ]);
+    }, 2000);
+  }
+
+  function handleRemovePost(postId) {
+    console.log('Remover post', postId);
+    setPosts((prevState) =>
+      prevState.filter(post => post.id !== postId)
+    );
   }
 
   return (
@@ -39,9 +46,12 @@ function App() {
 
       {posts.map(post => (
         <Post
+          // Sempre que precisarmos renderizar uma lista é necessário passar uma key, é uma propriedade que o React já tem
           key={post.id}
+          onRemove={handleRemovePost}
           likes={post.likes}
           post={{
+            id: post.id,
             title: post.title,
             subtitle: post.subtitle
           }}
