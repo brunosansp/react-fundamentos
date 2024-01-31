@@ -7,9 +7,9 @@ const category = "Categoria fundamentos do React";
 // O React obriga que todo componente inicie com a primeira letra em maiúsculo
 function App() {
   const [posts, setPosts] = useState([
-    { id: Math.random(), likes: 10, title: "Título da notícia #01", subtitle: "Subtítulo da notícia #01", },
-    { id: Math.random(), likes: 50, title: "Título da notícia #02", subtitle: "Subtítulo da notícia #02", },
-    { id: Math.random(), likes: 20, title: "Título da notícia #03", subtitle: "Subtítulo da notícia #03", }
+    { id: Math.random(), likes: 10, title: "Título da notícia #01", subtitle: "Subtítulo da notícia #01", read: false },
+    { id: Math.random(), likes: 50, title: "Título da notícia #02", subtitle: "Subtítulo da notícia #02", read: true },
+    { id: Math.random(), likes: 20, title: "Título da notícia #03", subtitle: "Subtítulo da notícia #03", read: false }
   ]);
 
   function handleRefresh() {
@@ -49,12 +49,7 @@ function App() {
           // Sempre que precisarmos renderizar uma lista é necessário passar uma key, é uma propriedade que o React já tem
           key={post.id}
           onRemove={handleRemovePost}
-          likes={post.likes}
-          post={{
-            id: post.id,
-            title: post.title,
-            subtitle: post.subtitle
-          }}
+          post={post}
         />
       ))}
     </Fragment>
