@@ -1,6 +1,8 @@
-import React, { Fragment, useState } from "react";
+import React, { useState } from "react";
+
 import Post from "./Post";
 import Header from "./Header";
+import { ThemeProvider } from "./ThemeContext";
 
 const category = "Categoria fundamentos do React";
 
@@ -34,7 +36,7 @@ function App() {
   }
 
   return (
-    <Fragment>
+    <ThemeProvider>
       <Header>
         <h2>Header children</h2>
         <button onClick={handleRefresh}>Atualizar</button>
@@ -52,7 +54,7 @@ function App() {
           post={post}
         />
       ))}
-    </Fragment>
+    </ThemeProvider>
   );
 }
 
